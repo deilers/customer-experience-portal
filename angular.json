@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/customer-exp-portal",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -127,8 +127,5 @@
       }
     }
   },
-  "defaultProject": "customer-exp-portal",
-  "cli": {
-    "analytics": "7830e7fe-24ec-4594-a1b7-a5fb20703347"
-  }
+  "defaultProject": "customer-exp-portal"
 }
