@@ -41,6 +41,10 @@
     margin: 0 16px;
   }
 
+  .toolbar .user {
+    margin: 0 16px;
+  }
+
   .toolbar #twitter-logo {
     height: 40px;
     margin: 0 16px;
