@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
-/* import { MatPaginatorModule, MatToolbarModule } from '@angular/material'; */
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
     imports: [
-        MatTableModule
+        MatTableModule,
+        MatInputModule,
+        MatFormFieldModule
     ],
     exports: [
-        MatTableModule
+        MatTableModule,
+        MatInputModule,
+        MatFormFieldModule
     ]
 })
 

@@ -10,6 +10,8 @@ import { environment } from '../environments/environment';
 import { HeaderComponent } from './header/header.component';
 import { SplashComponent } from './splash/splash.component';
 import { AuthService } from './services/auth.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { AuthService } from './services/auth.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [AuthService],
