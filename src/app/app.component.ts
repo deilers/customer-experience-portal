@@ -13,5 +13,4 @@ export class AppComponent {
   }
 
   title = 'customer-exp-portal';
-
 }

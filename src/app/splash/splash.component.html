@@ -14,8 +14,8 @@
         type="password" 
         matInput placeholder="Password"
         formControlName="password">
-        <mat-error *ngIf="isSubmitted">
-            <div *ngIf="!formControls.password.valid">dont forget your password</div>
+        <mat-error *ngIf="!formControls.password.valid">
+            <div>dont forget your password</div>
         </mat-error>
     </mat-form-field>
     <br>

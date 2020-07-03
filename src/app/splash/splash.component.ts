@@ -26,18 +26,9 @@ export class SplashComponent implements OnInit {
   }
 
   login(): void {
-    /* this.isSubmitted = true;
-    if (this.loginForm.invalid) {
-      return;
-    }
-
-    this.authService.firebaseSignin(
-      this.loginForm.get('email').value, 
-      this.loginForm.get('password').value
-    );
+    // TODO
   }
 
-  get formControls() { return this.loginForm.controls;  */ 
-  }
+  get formControls() { return this.loginForm.controls; }
 
 }
