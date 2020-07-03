@@ -1,1 +1,23 @@
-<h2>This app is under construction</h2>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input 
+        matInput 
+        placeholder="Email"
+        formControlName="email"
+        >
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input 
+        type="password" 
+        matInput placeholder="Password"
+        formControlName="password">
+        <mat-error *ngIf="!formControls.password.valid">
+            <div>dont forget your password</div>
+        </mat-error>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button type="submit">Submit</button>
+</form>
