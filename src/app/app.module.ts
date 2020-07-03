@@ -12,6 +12,7 @@ import { SplashComponent } from './splash/splash.component';
 import { AuthService } from './services/auth.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MatButtonModule,
     ReactiveFormsModule,
     MatSnackBarModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })

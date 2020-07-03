@@ -12,8 +12,7 @@ export class SplashComponent implements OnInit {
   loginForm: FormGroup;
   isSubmitted: boolean;
 
-  constructor(
-    private authService: AuthService) { }
+  constructor() { }
 
 
   ngOnInit(): void {
@@ -27,14 +26,18 @@ export class SplashComponent implements OnInit {
   }
 
   login(): void {
-    this.isSubmitted = true;
+    /* this.isSubmitted = true;
     if (this.loginForm.invalid) {
       return;
     }
 
-    this.authService.firebaseSignin(this.loginForm.get('email').value, this.loginForm.get('password').value);
+    this.authService.firebaseSignin(
+      this.loginForm.get('email').value, 
+      this.loginForm.get('password').value
+    );
   }
 
-  get formControls() { return this.loginForm.controls; }
+  get formControls() { return this.loginForm.controls;  */ 
+  }
 
 }
