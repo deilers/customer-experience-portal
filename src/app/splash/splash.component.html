@@ -1,4 +1,4 @@
-<form [formGroup]="loginForm" (ngSubmit)="login()">
+<form [formGroup]="loginForm">
     <mat-form-field>
         <mat-label>Email</mat-label>
         <input 
@@ -14,7 +14,7 @@
         type="password" 
         matInput placeholder="Password"
         formControlName="password">
-        <mat-error *ngIf="!formControls.password.valid">
+        <mat-error *ngIf="!loginForm.controls.password.valid">
             <div>dont forget your password</div>
         </mat-error>
     </mat-form-field>
