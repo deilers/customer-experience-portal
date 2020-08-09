@@ -14,9 +14,6 @@ export class UserFeedbackService {
 
   /**
    * writes error log to browser console if angular is in development-mode
-   *
-   * @param {string} message
-   * @memberof UserFeedbackService
    */
   devModeLogging(message: string): void {
     if (isDevMode()) {
@@ -26,8 +23,6 @@ export class UserFeedbackService {
 
   /**
    * displays login failure snackbar on page
-   *
-   * @memberof UserFeedbackService
    */
   failedLogin(): void {
     this.snackbar.open('Login Failed', Constants.DISMISS_SNACKBAR);
@@ -35,9 +30,6 @@ export class UserFeedbackService {
 
   /**
    * displays login success snackbar on page
-   *
-   * @param {string} email
-   * @memberof UserFeedbackService
    */
   successLogin(email: string): void {
     this.snackbar.open(`Login success: ${email}`, Constants.DISMISS_SNACKBAR);

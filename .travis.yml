@@ -7,6 +7,7 @@ before_script:
   - npm install -g firebase-tools
 script:
   - npm install
+  - ng lint
   - npm run build
   - firebase use default --token "$FIREBASE_TOKEN"
   - firebase deploy --token "$FIREBASE_TOKEN"

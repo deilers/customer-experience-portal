@@ -14,11 +14,8 @@ export class AuthService {
 
   /**
    * logged-in user
-   *
-   * @type {User}
-   * @memberof AuthService
    */
-  user: User;
+  private user: User;
 
   constructor(
     public router: Router,
@@ -26,20 +23,19 @@ export class AuthService {
   ) { }
 
 
-  getCurrentUser(): Observable<User> {
-    return new Observable<User>((observer: Subscriber<User>) => {
-      observer.next(this.user);
-    });
+  /**
+   * return currently logged in user
+   */
+  getCurrentUser(): User {
+    return this.user;
   }
 
   /**
    * Log into firebase with an email and password
-   *
-   * @memberof AuthService
    */
   firebaseSignin(email: string, password: string): Observable<firebase.auth.UserCredential> {
 
-    return Observable.create((observer: Subscriber<any>) => {
+    return new Observable((observer: Subscriber<any>) => {
       firebase.auth().signInWithEmailAndPassword(email, password)
       .then((cred) => {
         observer.next(cred);
@@ -53,8 +49,6 @@ export class AuthService {
 
   /**
    * initializes the firebase instance with env variables
-   *
-   * @memberof AuthService
    */
   initializeApp(): void {
     firebase.initializeApp(environment);
