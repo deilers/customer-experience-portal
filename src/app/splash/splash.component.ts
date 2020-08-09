@@ -9,9 +9,9 @@ import { FormGroup, FormBuilder, Validators, FormControl, AbstractControl } from
 })
 export class SplashComponent implements OnInit {
 
+  loginForm: FormGroup;
+
   constructor() { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void { }
 }
