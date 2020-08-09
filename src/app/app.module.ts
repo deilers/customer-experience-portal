@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
@@ -12,15 +11,18 @@ import { HeaderComponent } from './header/header.component';
 import { SplashComponent } from './splash/splash.component';
 import { AuthService } from './services/auth.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCommonModule } from '@angular/material/core';
+import { ObserversModule } from '@angular/cdk/observers';
+import { SubmitComplaintComponent } from './submit-complaint/submit-complaint.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SplashComponent
+    SplashComponent,
+    SubmitComplaintComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,7 @@ import { MatCommonModule } from '@angular/material/core';
     MatCommonModule,
     ReactiveFormsModule,
     MatSnackBarModule,
+    ObserversModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [AuthService],
